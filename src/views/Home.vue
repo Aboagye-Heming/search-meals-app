@@ -1,10 +1,6 @@
 <template>
   <div class="flex flex-col p-8">
-    <input
-      type="text"
-      class="rounded border-2 border-gray-200 w-full"
-      placeholder="Search for Meals"
-    />
+   
     <div class="flex justify-center gap-2 mt-3">
       <router-Link
         :to="{ name: 'byLetter', params: { letter } }"
@@ -19,17 +15,16 @@
 </template>
 
 <script setup>
-import {ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted } from "vue";
 import store from "../store";
 import axiosClient from "../axiosClient.js";
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-const ingredients = ref([])
+const ingredients = ref([]);
 
-onMounted(async() => {
-const response = await axiosClient.get("/list.php?i=list")
-console.log(response.data)
-ingredients.value = response.data
-
+onMounted(async () => {
+  const response = await axiosClient.get("/list.php?i=list");
+  console.log(response.data);
+  ingredients.value = response.data;
 });
 </script>
