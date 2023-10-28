@@ -32,12 +32,7 @@
           quas fugiat?
         </p>
         <div class="font-semibold pt-7">
-          <a
-            :href="meal.strYoutube"
-            target="_blank"
-            class="px-3 py-2 rounded border-2 border-red-600 hover:bg-red-600 hover:text-white transition-colors mr-4"
-            >YouTube</a
-          >
+          <YouTubeButton :href="meal.strYoutube">${fssd}</YouTubeButton>
         </div>
       </div>
     </div>
@@ -48,6 +43,7 @@ import { computed } from "@vue/reactivity";
 import store from "../store";
 import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
+import YouTubeButton from "../components/YouTubeButton.vue";
 
 const route = useRoute();
 const keyword = ref("");
