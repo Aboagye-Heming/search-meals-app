@@ -40,7 +40,7 @@
         </ul>
       </div>
     </div>
-    <div>
+    <div class="mt-4">
       <YouTubeButton :href="meal.strYoutube">Go to Youtube</YouTubeButton>
     </div>
   </div>
