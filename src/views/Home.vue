@@ -10,7 +10,6 @@
         {{ letter }}
       </router-Link>
     </div>
-    <!-- <pre>{{ingredients}}</pre> -->
   </div>
 </template>
 

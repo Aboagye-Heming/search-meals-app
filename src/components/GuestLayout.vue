@@ -1,6 +1,4 @@
-<template>
-   LoginPage
-</template>
+<template>LoginPage</template>
 <script setup>
-import Navbar from '../components/Navbar.vue';
+import Navbar from "../components/Navbar.vue";
 </script>
